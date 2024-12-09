@@ -16,18 +16,14 @@ class DisplayScreenActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // Inflate the layout using ViewBinding
+
         binding = ActivityDisplayScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Hello world
-
-        // Retrieve data from the intent
         val morningRuns = intent.getFloatArrayExtra("morningRuns") ?: floatArrayOf()
         val afternoonRuns = intent.getFloatArrayExtra("afternoonRuns") ?: floatArrayOf()
         val notes = intent.getStringArrayExtra("notes") ?: arrayOf()
 
-        // Build details string
         val details = StringBuilder()
         for (i in morningRuns.indices) {
             details.append("Day ${i + 1}:\n")
@@ -36,7 +32,6 @@ class DisplayScreenActivity : AppCompatActivity() {
             details.append("Notes: ${notes[i]}\n\n")
         }
 
-        // Update the TextView and set button listener
         binding.txtExpenseNotes.text = details.toString()
 
         binding.btnMainScreen2.setOnClickListener {
