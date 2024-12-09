@@ -42,7 +42,7 @@
         android:layout_weight="1" />
 
     <EditText
-        android:id="@+id/editTextText3"
+        android:id="@+id/adtAfternoonSpending"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -66,8 +66,22 @@
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="378dp"
+        android:layout_height="289dp"
         android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Submit" />
+
+    <Button
+        android:id="@+id/btnCalculateAverage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Calculate Avarage" />
 
     <Button
         android:id="@+id/btnDispalyScreen"
